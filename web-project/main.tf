@@ -43,7 +43,7 @@ resource "aws_s3_bucket_policy" "mywebapp" {
           Effect    = "Allow",
           Principal = "*",
           Action    = "s3:GetObject",
-          Resource  = "${aws_s3_bucket.mywebapp-bucket.id}/*"
+          Resource  = "arn:aws:s3:::${aws_s3_bucket.mywebapp-bucket.id}/*"
         }
       ]
     }
